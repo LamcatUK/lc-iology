@@ -1,0 +1,42 @@
+.team_cards {
+    .person__card {
+        border: 1px solid $grey-200;
+        padding: 1rem;
+        height: 100%;
+    }
+    .person__image {
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+    }
+    .person__name {
+        @extend .h3;
+        line-height: 1;
+        margin-bottom: 0;
+        position: relative;
+        .person__linkedin {
+            position: absolute;
+            right: 0;
+            top: 0.25rem;
+            font-size: 1.2rem;
+            color: $secondary;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: $secondary-400;
+            }
+        }
+    }
+    .person__title {
+        font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+        font-size: 0.778rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+
+}

@@ -1,0 +1,37 @@
+.faq {
+    background-color: $grey-100;
+    &__card {
+        background-color: white;
+        border: 1px solid $grey-200;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        &.collapsed .question::after {
+            transform: rotate(-90deg);
+        }
+    }
+    .question {
+        cursor: pointer;
+        position: relative;
+        h3 {
+            font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            font-size: 1.167rem;
+            margin-bottom: 0;
+        }
+        &::after {
+            content: "\f107";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0.1rem;
+            transition: all 0.3s ease;
+            font-family: "Font Awesome 6 Free";
+            color: $secondary;
+        }
+    }
+    .answer {
+        &__inner {
+            padding-top: 0.5rem;
+        }
+    }
+}

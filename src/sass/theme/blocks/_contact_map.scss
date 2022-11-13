@@ -1,0 +1,18 @@
+.contact_map {
+    &__inner {
+        border: 1px solid $grey-200;
+    }
+    .socials {
+        a {
+            font-size: 1.2rem;
+            transition: all 0.15s ease-in-out;
+            font-size: 1.4rem;
+            &:not(:last-of-type) {
+                margin-right: 1rem;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}

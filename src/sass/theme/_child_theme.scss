@@ -1,0 +1,164 @@
+@import "mixins";
+@import "typography";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "blocks/blocks";
+@import "blog";
+// @import "careers";
+
+
+main {
+    margin-top: 64px;
+    // margin-top: 113px;
+    @media (min-width:992px) {
+        margin-top: 94px;
+    }
+}
+
+a.noline {
+    text-decoration: none;
+}
+
+hr {
+    color: $grey-100;
+    opacity: 1;
+}
+
+.mw-95ch {
+    max-width: 95ch;
+}
+.mw-80ch {
+    max-width: 80ch;
+    margin: auto;
+}
+.mw-65ch {
+    max-width: 65ch;
+}
+.mw-50ch {
+    max-width: 50ch;
+}
+
+.cols-lg-2 {
+    @media (min-width:992px) {
+        columns: 2;
+    }
+}
+
+.contain_text--left {
+    max-width: 513px;
+    margin: auto;
+    padding-left: 1.5rem;
+    @media (min-width:768px) {
+        max-width: 693px;
+    }        
+    @media (min-width:992px) {
+        margin-left: auto;
+        margin-right: initial;
+        max-width: 453px;
+    }
+    @media (min-width:1200px) {
+        max-width: 543px;
+    }
+    @media (min-width:1400px) {
+        max-width: 633px;
+    }
+}
+.contain_text--right {
+    max-width: 513px;
+    margin: auto;
+    @media (min-width:768px) {
+        max-width: 693px;
+    }        
+    @media (min-width:992px) {
+        margin-left: initial;
+        margin-right: auto;
+        max-width: 453px;
+    }
+    @media (min-width:1200px) {
+        max-width: 543px;
+    }
+    @media (min-width:1400px) {
+        max-width: 633px;
+    }
+}
+
+// colours
+
+.bg--dark {
+    background-color: $black;
+    color: white;
+}
+.bg--light {
+    background-color: $grey-100;
+}
+
+.text--orange {
+    color: $orange-500;
+}
+
+// bread
+.page-meta {
+    font-size: 0.8rem;
+    #breadcrumbs {
+        img {
+            max-width: 22px;
+        }
+    }
+}
+
+
+.lSSlideWrapper {
+    text-align: center;
+}
+
+// map
+.map {
+    iframe {
+        display: block;
+    }
+}
+
+
+.team__photo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 2 / 2.5;
+    margin-bottom: .5rem;
+}
+
+
+.break-out{
+    width: 100vw;
+    position: relative;
+    left: calc(-1 * (100vw - 100%) / 2);
+}
+
+:where(.wp-block-columns.has-background) {
+    padding: 0;
+}
+
+.has-lgreen-background-color {
+    background-color: $grey-100;
+}
+
+.wp-block-columns.breakout {
+    margin-bottom: 0;
+}
+
+.fa-ul {
+    margin-left: 1.5rem;
+}
+
+
+/*--------------- LOGIN --*/
+.login {
+    background-color: $grey-200;
+    &__form {
+        background-color: white;
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+}

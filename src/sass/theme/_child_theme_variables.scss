@@ -1,0 +1,35 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+
+$black: #472021;
+
+$grey-100: #f3f8f6;
+$grey-200: #d5e5e1;
+
+$green-900: #215732;
+$green: $green-900;
+
+// jungle green
+// $secondary: hsl(162, 58%, 42%);
+// $secondary-400: hsl(162, 58%, 62%);
+
+// tangerine yellow
+// $secondary: hsl(48, 100%, 50%);
+// $secondary-400: hsl(48, 100%, 70%);
+
+$secondary: hsl(43, 100%, 57%);
+$secondary-400: hsl(43, 100%, 77%);
+
+
+$primary: $green-900;
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1130px,
+//   xxl: 1130px
+// );

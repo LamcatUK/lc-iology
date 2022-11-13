@@ -1,0 +1,62 @@
+.frm {
+    position: relative;
+    z-index: 0;
+    background-color: $grey-100;
+    &__card {
+        background-color: white;
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    &.bg--flower::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        background-image: url(../img/prenplants-flower--dk.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 90%;
+        left: -8rem;
+        top: 50%;
+        width: 420px;
+        transform: translateY(-50%);
+        opacity: 0.6;
+    }
+
+    .wpcf7 {
+        max-width: unset;
+    }
+}
+
+
+.form-control,
+.form-select {
+    border-radius: 0 !important;
+}
+
+
+.form-label {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 0.889rem;
+}
+
+.wpcf7-acceptance {
+    .wpcf7-list-item {
+        margin-left: 0 !important;
+        margin-bottom: 1rem;
+        label {
+            font-size: 0.889rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    .frmCheck {
+        margin-top: 0.25rem;
+        margin-right: 0.5rem;
+    }
+}
+

@@ -1,0 +1,13 @@
+.banner {
+    background-color: $primary;
+    color: white;
+    &__icon {
+        max-height: 75px;
+    }
+    &__content {
+        font-size: 2rem;
+        span {
+            font-weight: 600;
+        }
+    }
+}

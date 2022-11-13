@@ -1,0 +1,162 @@
+
+#navbar {
+    transition: all 0.3s ease;
+    &.hide {
+        top: -140px;
+    }
+    #top-nav {
+        // background-color: white;
+        background-color: $primary;
+        .navbar-brand {
+            display: flex;
+            background-image: url(../img/prenplants-logo--wo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            width: 300px;
+            height: 65px;
+            @media (min-width:992px) {
+                width: 523px;
+            }
+            margin-right: 0;
+        }
+        .navbar-toggler {
+            // color: $primary;
+            color: white;
+            margin-right: 1rem;
+            &:focus {
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .contacts {
+            a {
+                color: white;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    
+        /* ditch the ugly blue outline */
+        .navbar-toggler:focus,
+        .navbar-toggler:active {
+            outline: 0;
+        }
+    
+        .close-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+        }
+        /* hide close when burger shown */
+        .navbar-toggler.collapsed .close-icon {
+            display: none;
+        }
+    
+        .navbar-toggler.collapsed .navbar-toggler-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+        }
+        .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+            display: none;
+        }
+    }
+    #main-nav {
+        // color: $primary;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        // background-color: $primary;
+        background-color: white;
+        text-transform: uppercase;
+
+        // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+        .navbar-nav {
+            li.current-menu-item > a,
+            li.current-page-ancestor > a {
+                // color: $secondary;
+                color: $black;
+            }
+        }
+
+        .nav-link {
+            padding: 0.25rem 1rem;
+            font-size: 0.889rem;
+            font-weight: 600;
+            // color: white;
+            color: $primary;
+            transition: all 0.15s ease-in-out;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        #navbarNavDropdown {
+            #primaryNav {
+                li {
+                    @media (max-width:991px) {
+                        // border-bottom: 1px solid $blue-100;
+                        padding-left: 1rem;
+                        // a.nav-link {
+                        //     color: $black;
+                        // }
+                    }
+                }
+            }
+            .dropdown-menu {
+                background-color: $black;
+                border-radius: 0;
+                border: none;
+                padding: 0;
+                margin-top: 0;
+                a {
+                    color: white;
+                    text-transform: initial;
+                    font-size: 0.889rem;
+                    transition: all 0.15s ease-in-out;
+                    &:hover {
+                        background-color: $primary;
+                    }
+                }
+                li {
+                    padding-left: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+// .mobile-nav {
+//     width: 100%;
+//     .social {
+//         a {
+//             color: $primary;
+//             font-size: 1.4rem;
+//         }
+//     }
+//     &__top {
+//         // border-bottom: 1px solid $blue-200;
+//         height: 50%;
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
+//     }
+//     &__bottom {
+//         height: 50%;
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
+//         a {
+//             color: white;
+//             text-decoration: none;
+//         }
+//     }
+// }
