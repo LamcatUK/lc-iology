@@ -3,6 +3,18 @@
         box-sizing: border-box;
     }
 
+    #reset,
+    #clear {
+        font-size: .889rem;
+        border-radius: 0.25rem !important;
+        font-weight: 600;
+        min-width: 170px;
+        padding: 0.5rem 1rem;
+        border: 1px solid green;
+        background-color: #eee;
+        margin-right: 0.5rem;
+    }
+
     .btn-group,
     .list-group,
     .list-group-item {
@@ -15,28 +27,26 @@
         border: 1px solid #ddd;
         background: #eee;
         .button {
-            display: block;
-            float: left;
+            display: flex;
+            justify-content: space-between;
             padding: 0.25rem 0.5rem;
             margin: 0 !important;
             border: none;
             border-right: 1px solid #ddd;
             text-align: left;
+            &:last-child {
+                border-width: 0px;
+            }
         }
     }
-
-    .btn-group .button:last-child {
-    border-width: 0px;
-    }
-
     .is-checked {
-    font-weight: 600;
+        font-weight: 500;
     }
 
     .list-group {
-    border-width: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none;
+        border-width: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none;
     }
 
     .list-group-item {
@@ -62,25 +72,25 @@
 
     .category {
         min-width: 200px;
-        width: 20%;
+        width: 24%;
         font-weight: bold;
     }
 
     .genus {
         min-width: 200px;
-        width: 20%;
+        width: 24%;
         font-style: italic;
     }
 
     .species {
         min-width: 200px;
-        width: 20%;
+        width: 24%;
         font-style: italic;
     }
 
     .variant {
         min-width: 200px;
-        width: 20%;
+        width: 24%;
     }
 
     .button.enquire,
@@ -88,11 +98,37 @@
         cursor: default !important;
     }
     .enquire {
-        min-width: 200px;
-        width: 20%;
+        min-width: 80px;
+        width: 4%;
         text-align: center;
     }
 
+    .all_stock {
+        overflow-x: auto;
+    }
 
+    .sort,
+    .content {
+        min-width: 1000px;
+    }
 
+    .btn-group {
+        display: flex;
+    }
+    .content {
+        li {
+            display: flex;
+        }
+    }
+
+    .enquire input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        margin-top: 0;
+    }
+
+    .tb-data-single {
+        cursor: pointer;
+    }
 }

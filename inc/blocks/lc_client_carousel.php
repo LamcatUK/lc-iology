@@ -1,3 +1,4 @@
+<!-- suppliers carousel -->
 <section class="suppliers_carousel bg--dark py-5">
 <h2 class="mb-4"><?=get_field('title')?></h2>
 <div class="suppliers mb-4">

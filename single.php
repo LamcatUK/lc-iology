@@ -24,7 +24,7 @@ $posttags = get_the_tags();
             }
             ?>
         </div>
-        <div class="row news">
+        <div class="row single-news">
             <div class="col-md-9 mb-4">
                 <?php
                 if (get_the_post_thumbnail_url(get_the_ID())) {
@@ -39,7 +39,7 @@ $posttags = get_the_tags();
                 }
                 ?>
                 <h1><?=get_the_title()?></h1>
-                <div class="news__date"><strong>Date:</strong> <?=get_the_date('j F Y')?></div>
+                <div class="news__date mb-4"><strong>Date:</strong> <?=get_the_date('j F Y')?></div>
                 <div class="news__container">
                     <?=apply_filters('the_content', get_the_content())?>
                 </div>
@@ -50,6 +50,13 @@ $posttags = get_the_tags();
             <div class="col-md-3">
                 <h2 class="h3">Latest Blogs</h2>
                 <div class="mb-4"><?=recent_posts(get_the_ID())?></div>
+                <div class="mb-4 p-4 newsletter">
+                    <div class="mb-2"><strong>Sign up to our newsletter</strong></div>
+                    <div class="mb-2">
+                        <input type="text" class="form-control form-control-sm w-100 mb-2" placeholder="Replace with MailChimp">
+                        <button class="btn btn-primary w-100">Subscribe</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

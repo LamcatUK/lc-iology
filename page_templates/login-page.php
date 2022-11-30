@@ -51,5 +51,12 @@ if ( ! is_user_logged_in() ) {
 </main>
     <?php
 }
+else {
+    ?>
+<script>
+window.location.replace("<?=get_home_url()?>");
+</script>
+    <?php
+}
 
 get_footer();

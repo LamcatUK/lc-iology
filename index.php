@@ -16,7 +16,7 @@ $img = $img[0];
 <section class="hero">
     <div class="row h-100">
         <div class="col-md-6 contain_text--left">
-            <h1>Prenplants News &amp; Insights</h1>
+            <h1>Prenplants News &amp; Blogs</h1>
         </div>
         <div class="col-md-6">
             <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
@@ -44,8 +44,8 @@ $img = $img[0];
                         <div class="news__image" style="background-image:url(<?=$img?>)"></div>
                         <div class="news__bottom">
                             <div class="news__meta">
-                                <div class="news__title"><?=get_the_title()?></div>
                                 <div class="news__date"><?=get_the_date('j M, Y')?></div>
+                                <div class="news__title"><?=get_the_title()?></div>
                             </div>
                             <div class="news__intro"><?=wp_trim_words(get_the_content(),30)?></div>
                             <div class="news__link">Read more</div>

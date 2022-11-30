@@ -6,6 +6,9 @@
         text-decoration: none;
         color: $black;
        
+        border-radius: 0.25rem;
+        overflow: hidden;
+
         transition: all 0.2s ease-in-out;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         
@@ -33,14 +36,15 @@
         }
     }
     &__title {
-        font-size: 1.2rem;
+        font-size: 1.167rem;
         font-weight: 600;
         line-height: 1.1;
         margin-bottom: 0.25rem;
     }
     &__date {
         position: relative;
-        font-size: 0.9rem;
+        color: $secondary;
+        font-size: 0.778rem;
     }
     &__intro {
         margin-bottom: 0.5rem;
@@ -57,6 +61,11 @@
         font-weight: 700;
     }
 }
+.single-news .news__date {
+    color: $primary;
+    font-size: 1rem;
+}
+
 // .page-meta {
 //     margin-bottom: 1rem;
 //     font-weight: 700;
@@ -103,6 +112,8 @@
         display: block;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
+        border-radius: 0.25rem;
+        overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -123,6 +134,7 @@
         min-height: 5.5rem;
     }
     &__date {
+        color: $secondary;
         font-size: 0.778rem;
     }
     &__title {
@@ -177,4 +189,8 @@
     li.active a {
         color: $primary;
     }
+}
+
+.newsletter {
+    background-color: $grey-100;
 }

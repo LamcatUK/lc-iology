@@ -6826,13 +6826,11 @@
 	  }, EventTarget.prototype.addEventListener._original = e;
 	}
 
-	(function () {
-	  var doc = document.documentElement;
-	  var w = window;
-	  w.scrollY || doc.scrollTop;
-	  document.getElementById('navbar');
-
-	})();
+	var doc = document.documentElement;
+	var w = window;
+	w.scrollY || doc.scrollTop;
+	document.getElementById('navbar');
+	 // window.addEventListener('scroll', checkScroll);
 
 	exports.Alert = alert;
 	exports.Button = button;

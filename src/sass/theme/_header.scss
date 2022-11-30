@@ -5,6 +5,11 @@
         top: -140px;
     }
     #top-nav {
+
+        .fa-solid {
+            color: $secondary;
+        }
+
         // background-color: white;
         background-color: $primary;
         .navbar-brand {
@@ -16,7 +21,7 @@
 
             width: 300px;
             height: 65px;
-            @media (min-width:992px) {
+            @media (min-width:1200px) {
                 width: 523px;
             }
             margin-right: 0;
@@ -29,8 +34,17 @@
                 border: none !important;
                 box-shadow: none !important;
             }
+            .close-icon,
+            &.collapsed .close-icon {
+              display: none;
+            }
+            &:not(.collapsed) .close-icon {
+              display: inline !important;
+            }
+            &:not(.collapsed) .navbar-icon {
+              display: none !important;
+            }
         }
-
         .contacts {
             a {
                 color: white;
@@ -74,7 +88,7 @@
         justify-content: space-between;
         // background-color: $primary;
         background-color: white;
-        text-transform: uppercase;
+        // text-transform: uppercase;
 
         // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -88,8 +102,12 @@
         }
 
         .nav-link {
-            padding: 0.25rem 1rem;
-            font-size: 0.889rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            @media (min-width:1200px) {
+                padding: 0.25rem 1rem;
+                font-size: 0.889rem;
+            }
             font-weight: 600;
             // color: white;
             color: $primary;
@@ -110,6 +128,7 @@
                         // }
                     }
                 }
+
             }
             .dropdown-menu {
                 background-color: $black;

@@ -1,3 +1,4 @@
+<!-- banner -->
 <section class="banner py-1">
     <div class="container-xl text-center d-md-flex justify-content-center align-items-center">
         <?php

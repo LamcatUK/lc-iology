@@ -53,19 +53,22 @@ $(function() {
 		$buttonGroup.on('click', 'button', function() {
 		
 		$buttonGroup.find('.is-checked').removeClass('is-checked');
-		$buttonGroup.find('i').removeClass();
+		$buttonGroup.find('i').removeClass('fa-sort-down').removeClass('fa-sort-up');
+		$buttonGroup.find('i').addClass('fa-sort');
 		$(this).addClass('is-checked');
-		$(this).find('i').addClass('fa');
+		// $(this).find('i').addClass('fa-sort');
 		
 		if($(this).hasClass('desc')){
 			$(this).removeClass('desc').addClass('asc');
-			$(this).find('.fa').removeClass('fa-sort-amount-asc').addClass('fa-sort-amount-desc');
+			// $(this).find('.fa').removeClass('fa-sort-amount-asc').addClass('fa-sort-amount-desc');
+			$(this).find('.fa').removeClass('fa-sort').removeClass('fa-sort-down').addClass('fa-sort-up');
 			$container.isotope({
 				sortAscending : false
 			});
 		} else {
 			$(this).removeClass('asc').addClass('desc');
-			$(this).find('.fa').removeClass('fa-sort-amount-desc').addClass('fa-sort-amount-asc');
+			// $(this).find('.fa').removeClass('fa-sort-amount-desc').addClass('fa-sort-amount-asc');
+			$(this).find('.fa').removeClass('fa-sort').removeClass('fa-sort-up').addClass('fa-sort-down');
 			$container.isotope({
 				sortAscending : true
 			});
@@ -108,7 +111,41 @@ $(function() {
 		buttonFilter = '';
 		$(".quicksearch").val('');
 		$('#by-cat').prop('selectedIndex',0);
-		$container.isotope();
+
+		$('.btn-group').each(function(i, buttonGroup) {
+			var $buttonGroup = $(buttonGroup);
+			$buttonGroup.find('.is-checked').removeClass('is-checked');
+			$buttonGroup.find('i').removeClass('fa-sort-down').removeClass('fa-sort-up');
+			$buttonGroup.find('i').addClass('fa-sort');
+		});
+
+		$container.isotope({
+			sortBy : 'original-order',
+			sortAscending: true
+		});
 	});
-  
+
+    $('#clear').on('click',function(){
+        $('input.selection:checkbox').prop('checked',false);
+        $('#selection').val('');
+    });
+
+
+	$('.tb-data-single').on('click',function(){
+
+		var c = $(this).find('input[type="checkbox"]');
+        c.prop("checked", !c.prop("checked"));
+
+		var values = [];
+        $('input.selection:checkbox:checked').each(function(i){
+            values[i] = $(this).val() + '\n';
+        });
+        var enquire = '';
+        $.each(values, function(index, val) {
+            enquire += val;
+        });
+
+        $('#selection').val(enquire);
+	});
+
 }(jQuery));

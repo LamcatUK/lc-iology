@@ -68,17 +68,17 @@ do_action('wp_body_open');
                 <div class="d-none d-xl-flex navbar-nav justify-content-end my-2 w-100 align-content-end">
                     <div class="contacts">
                         <div class="d-flex me-4">
-                            <a href="tel:<?=parse_phone(get_field('phone','options'))?>" class="nav-link"><i class="fa fa-phone"></i> <?=get_field('phone','options')?></a>
-                            <a href="mailto:<?=get_field('email','options')?>" class="nav-link"><i class="fa fa-envelope"></i> <?=get_field('email','options')?></a>
+                            <a href="tel:<?=parse_phone(get_field('phone','options'))?>" class="nav-link"><i class="fa-solid fa-phone"></i> <?=get_field('phone','options')?></a>
+                            <a href="mailto:<?=get_field('email','options')?>" class="nav-link"><i class="fa-solid fa-envelope"></i> <?=get_field('email','options')?></a>
                             <?php
                             if (is_user_logged_in()) {
                                 ?>
-                            <a href="<?=wp_logout_url('/')?>" class="nav-link"><i class="fa fa-user"></i> Log Out</a>
+                            <a href="<?=wp_logout_url('/')?>" class="nav-link"><i class="fa-solid fa-user"></i> Log Out</a>
                                 <?php
                             }
                             else {
                                 ?>
-                            <a href="/login/" class="nav-link"><i class="fa fa-user"></i> Login</a>
+                            <a href="/login/" class="nav-link"><i class="fa-solid fa-user"></i> Login</a>
                                 <?php
                             }
                             ?>
@@ -87,8 +87,8 @@ do_action('wp_body_open');
                 </div>
                 <div class="d-inline d-xl-none align-self-center">
                     <button class="navbar-toggler collapsed align-self-end me-auto input-button" id="navToggle" data-bs-toggle="collapse" data-bs-target="#primaryNav" type="button"> <!-- style="border-color: rgba(255,255,255,.5);" -->
-                    <span class="navbar-icon"><i class="fa fa-bars"></i></span>
-                        <div class="close-icon py-1"><i class="fa fa-times"></i></div>
+                    <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
+                        <div class="close-icon py-1"><i class="fa-solid fa-times"></i></div>
                     </button>
                 </div>
             </div>

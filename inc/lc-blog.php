@@ -88,10 +88,12 @@ function recent_posts($post)
                 $q->the_post();
                 $img = get_the_post_thumbnail_url(get_the_ID(),'medium') ? get_the_post_thumbnail_url(get_the_ID(),'medium') : catch_that_image(get_the_ID());
                 ?>
-                <a class="recent__post" href="<?=get_the_permalink()?>">
+                <a class="recent__post mb-3" href="<?=get_the_permalink()?>">
                     <div class="recent__image" style="background-image:url(<?=$img?>)"></div>
-                    <div class="recent__title"><?=get_the_title()?></div>
-                    <div class="recent__date"><?=get_the_date()?></div>
+                    <div class="recent__inner">
+                        <div class="recent__date"><?=get_the_date()?></div>
+                        <div class="recent__title"><?=get_the_title()?></div>
+                    </div>
                 </a>
                 <?php
             }
@@ -121,10 +123,11 @@ function recent_posts_cols() {
             <?php
             while ($q->have_posts()) {
                 $q->the_post();
+                $img = get_the_post_thumbnail_url(get_the_ID(),'large') ? get_the_post_thumbnail_url(get_the_ID(),'large') : catch_that_image(get_the_ID());
                 ?>
                 <div class="col-md-4">
                     <a class="recent__post" href="<?=get_the_permalink()?>">
-                        <div class="recent__image" style="background-image:url(<?=get_the_post_thumbnail_url( get_the_ID(), 'large' )?>)"></div>
+                        <div class="recent__image" style="background-image:url(<?=$img?>)"></div>
                         <div class="recent__inner">
                             <div class="recent__date"><?=get_the_date()?></div>
                             <div class="recent__title"><?=get_the_title()?></div>

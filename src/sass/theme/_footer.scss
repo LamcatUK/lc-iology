@@ -2,6 +2,10 @@
 .footer {
     font-size: 0.778rem;
 
+    .fa-solid {
+        color: $secondary;
+    }
+
     background-color: $primary;
     color: white;
     a {

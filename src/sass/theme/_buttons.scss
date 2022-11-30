@@ -1,6 +1,6 @@
 .btn {
     font-size: 0.889rem;
-    border-radius: 0 !important;
+    border-radius: 0.25rem !important;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: all 0.2s ease-in-out;
@@ -37,7 +37,7 @@
 }
 .btn-submit {
     border: none !important;
-    border-radius: 0 !important;
+    border-radius: 0.25rem !important;
     // background-color: $grey-900 !important;
     color: white !important;
     text-transform: uppercase !important;

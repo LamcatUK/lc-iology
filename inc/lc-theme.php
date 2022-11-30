@@ -275,3 +275,31 @@ function custom_authenticate_wpcc( $user, $username, $password ) {
 }
 add_filter( 'authenticate', 'custom_authenticate_wpcc', 31, 3);
 
+
+
+//Custom Dashboard Widget
+add_action( 'wp_dashboard_setup', 'register_cb_dashboard_widget' );
+function register_cb_dashboard_widget() {
+	wp_add_dashboard_widget(
+		'lc_dashboard_widget',
+		'Lamcat',
+		'lc_dashboard_widget_display'
+	);
+
+}
+
+function lc_dashboard_widget_display() {
+   ?>
+    <div style="display: flex; align-items: center; justify-content: space-around;">
+        <img style="width: 100%;" src="<?= get_stylesheet_directory_uri().'/img/lamcat.jpg'; ?>">
+    </div>
+    <div>
+        <p style="text-align:center"><strong>Thank you for choosing Lamcat!</strong></p>
+        <hr>
+        <p>Got a problem with your site, or want to make some changes & need us to take a look for you?</p>
+        <p>Use the button below to get in touch and we'll get back to you ASAP.</p>
+        <p style="text-align:center"><a class="button button-primary" target="_blank" rel="noopener nofollow noreferrer" href="mailto:hello@lamcat.co.uk">Contact</a></p>
+    </div>
+   <?php
+}
+
