@@ -53,3 +53,9 @@ var toggleHeader = function(direction, curScroll) {
 // window.addEventListener('scroll', checkScroll);
 
 
+// lightbox.option({
+//   'resizeDuration': 200,
+//   'imageFadeDuration': 300,
+//   'wrapAround': true,
+//   'disableScrolling': true,
+// });

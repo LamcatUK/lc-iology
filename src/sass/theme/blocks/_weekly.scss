@@ -1,0 +1,220 @@
+.weekly-list {
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+    .status {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        .count {
+            .filter-count {
+                font-weight: 600;
+            }
+        }
+    }
+
+    #reset,
+    #clear,
+    #toForm {
+        font-size: 1rem; //.889rem;
+        border-radius: 0.25rem !important;
+        font-weight: 600;
+        min-width: 170px;
+        padding: 0.5rem 1rem;
+        border: 1px solid $primary;
+        background-color: $grey-100;
+        margin-right: 0.5rem;
+    }
+
+    .btn-group,
+    .list-group,
+    .list-group-item {
+    width: 100%;
+    }
+
+    .btn-group {
+        margin: 0;
+        padding: 0;
+        border: 1px solid #ddd;
+        background: #eee;
+        .button {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0.5rem;
+            margin: 0 !important;
+            border: none;
+            border-right: 1px solid #ddd;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.889rem;
+            &:last-child {
+                border-width: 0px;
+            }
+        }
+        .enquire {
+            &::after {
+                content: "\f46d";
+                font-family: "Font Awesome 6 Free";
+            }
+        }
+    }
+    .is-checked {
+        font-weight: 500;
+    }
+
+    .list-group {
+        border-width: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none;
+    }
+
+    .list-group-item {
+        padding: 0;
+        margin: 0;
+        border-width: 0px 1px 0;
+        border-radius: 0 !important;
+        background-color: transparent;
+        span {
+            display: block;
+            float: left;
+            padding: 0.25rem 0.5rem;
+            border-color: #ddd;
+            border-style: solid;
+            border-width: 0 1px 1px 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            &:last-child {
+                border-right-width: 0;
+            }
+        }
+    }
+
+
+    .category {
+        min-width: 100px;
+        width: 20%;
+        font-weight: bold;
+    }
+
+    .genus {
+        min-width: 100px;
+        width: 23%;
+        font-style: italic;
+    }
+
+    .species {
+        min-width: 100px;
+        width: 23%;
+        font-style: italic;
+    }
+    .price {
+        min-width: 100px;
+        width: 10%;
+        text-align: right;
+    }
+    .size {
+        min-width: 80px;
+        width: 4%;
+        text-align: right;
+    }
+    .ean {
+        min-width: 120px;
+        width: 15%;
+    }
+
+    .button.enquire,
+    .button.category {
+        cursor: default !important;
+    }
+    .enquire {
+        min-width: 45px;
+        width: 5%;
+        text-align: center;
+        display: inline-block !important;
+    }
+
+    .all_stock {
+        overflow-x: auto;
+    }
+
+    .sort,
+    .content {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .btn-group {
+        display: flex;
+    }
+    .content {
+        li {
+            display: flex;
+        }
+    }
+
+    .enquire input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        margin-top: 0;
+        pointer-events: none;
+    }
+
+    .tb-data-single {
+        font-size: 0.889rem;
+        cursor: pointer;
+        transition: background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $grey-100;
+        }
+    }
+}
+
+#openModal {
+    display: none;
+    position: fixed;
+    top: 30vh;
+    right: 0;
+    min-width: unset;
+    border: 1px solid $primary;
+    background-color: $secondary;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    color: $primary;
+    padding: 1rem;
+    font-weight: 600;
+    z-index: 999;
+    transition: box-shadow 0.2s ease-in-out,
+                transform 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        transform: translateY(2px);
+    }
+
+    .selection {
+        text-align: left;
+        .selection-count {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+#enquireModal {
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 700px;
+            margin: 1.75rem auto;
+        }
+    }
+    .modal-body {
+        padding-bottom: 2rem;
+    }
+
+    #selectionList {
+        padding-inline-start: 1rem;
+    }
+}

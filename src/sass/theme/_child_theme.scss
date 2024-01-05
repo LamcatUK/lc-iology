@@ -5,19 +5,30 @@
 @import "footer";
 @import "blocks/blocks";
 @import "blog";
-// @import "careers";
+@import "careers";
 
+// * {
+//     outline: 1px solid red;
+// }
 
 main {
     margin-top: 64px;
     // margin-top: 113px;
     @media (min-width:992px) {
-        margin-top: 94px;
+        margin-top: 90px;
     }
+    position: relative;
 }
 
 a.noline {
     text-decoration: none;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
 }
 
 hr {
@@ -166,4 +177,96 @@ hr {
 
 .is-layout-flex {
     display: flex;
+    .wp-block-columns {
+        flex-grow: 1;
+    }
 }
+
+
+.slider .slick-slide {
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+
+.news-hub {
+    position: relative;
+    z-index: 0;
+    &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        background-image: url(../img/prenplants-flower--dk.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        left: -8rem;
+        top: 10rem;
+        width: 50vw;
+        transform: translateY(-50%);
+        opacity: 0.6;
+    }
+    padding-top: 3rem;
+    background-color: $grey-100;
+    .ig-title {
+        font-size: 1.25rem;
+        letter-spacing: -0.5px;
+        font-weight: 600;
+    }
+    .btn--follow {
+        background-color: rgb(15, 20, 25);
+        color: white;
+        border-radius: 10rem;
+        min-width: 78px;
+        min-height: 32px;
+        padding: 0.5rem 16px;
+        font-size: 0.778rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+
+.lc-table {
+    border: 1px solid $blue-700;
+    th {
+        background-color: $blue-700;
+        color: white;
+        font-weight: 600;
+    }
+    tr :not(:first-child) {
+        text-align: center;
+    }
+    td {
+        border-width: 1px;
+    }
+}
+
+
+
+// show stuff that overflows horizontally
+// * {
+//     outline: 1px solid #f00 !important;
+// }
+// show stuff that overflows horizontally via console JS
+/*
+var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
+for (; i < all.length; i++) {
+    rect = all[i].getBoundingClientRect();
+    if (rect.right > docWidth || rect.left < 0){
+        console.log(all[i]);
+        all[i].style.borderTop = '1px solid red';
+    }
+}
+*/
+
+// @mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
+// 	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+// 	$calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+// 	font-size: $min-value; // Fallback for older browsers
+// 	font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+// }

@@ -2,11 +2,8 @@
 .footer {
     font-size: 0.778rem;
 
-    .fa-solid {
-        color: $secondary;
-    }
 
-    background-color: $primary;
+    background-color: $blue-700;
     color: white;
     a {
         color: white;
@@ -17,6 +14,7 @@
         }
     }
     .logo {
+        width: 200px;
         max-width: 100%;
         // @media (min-width:1120px) {
         //     max-width: 250px;
@@ -51,7 +49,7 @@
 .colophon {
     background-color: $black;
     color: white;
-    font-size: 0.778rem;
+    font-size: 0.667rem;
     a {
         color: white;
         text-decoration: none;

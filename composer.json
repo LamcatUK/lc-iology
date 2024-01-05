@@ -1,5 +1,5 @@
 {
-    "name": "holger1411/lc-prenplants",
+    "name": "holger1411/lc-iology",
     "description": "Basic Child Theme for Understrap Theme Framework",
     "type": "library",
     "license": "GPL-2.0",
@@ -8,5 +8,5 @@
         "phpoffice/phpspreadsheet": "^1.5"
     },
     "keywords": ["wordpress","theme","bootstrap"],
-    "homepage": "https://github.com/holger1411/lc-prenplants"
+    "homepage": "https://github.com/holger1411/lc-iology"
 }

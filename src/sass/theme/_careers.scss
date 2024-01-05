@@ -1,0 +1,57 @@
+.joblistings {
+    margin-bottom: 3rem;
+    a {
+        text-decoration: none;
+    }
+}
+.joblisting {
+    border-bottom: 1px solid $grey-100;
+    padding: 1rem 0;
+
+    &__top {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+    }
+    &__title {
+        margin-bottom: 0;
+    }
+    &__type {
+        background-color: $grey-100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        font-size: .889rem;
+    }
+
+    // &__banner {
+    // }
+
+    &__link {
+        font-weight: 600;
+    }
+}
+
+.share-icons {
+    display: flex;
+    gap: 0.5rem;
+    a {
+        text-decoration: none;
+        transition: color 0.2s ease;
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
+
+.single-careers .wpcf7 {
+    max-width: unset;
+}
+.wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: 0.5rem;
+}

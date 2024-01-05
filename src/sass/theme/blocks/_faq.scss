@@ -1,13 +1,18 @@
 .faq {
     background-color: $grey-100;
+
+    .accordion-button:not(.collapsed) {
+        background-color: $blue-100;
+        color: $black;
+    }
+
     &__card {
         background-color: white;
-        border: 1px solid $grey-200;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        &.collapsed .question::after {
-            transform: rotate(-90deg);
-        }
+        // border: 1px solid $grey-200;
+        // margin-bottom: 1rem;
+        // .question[aria-expanded=true]::after {
+        //     transform: rotate(0deg);
+        // }
     }
     .question {
         cursor: pointer;
@@ -18,20 +23,22 @@
             font-size: 1.167rem;
             margin-bottom: 0;
         }
-        &::after {
-            content: "\f107";
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0.1rem;
-            transition: all 0.3s ease;
-            font-family: "Font Awesome 6 Free";
-            color: $secondary;
-        }
+        // &::after {
+        //     content: "\f107";
+        //     display: block;
+        //     position: absolute;
+        //     right: 0;
+        //     top: 0.1rem;
+        //     transition: all 0.3s ease;
+        //     font-family: "Font Awesome 6 Free";
+        //     font-weight: 600;
+        //     color: $secondary;
+        //     transform: rotate(-90deg);
+        // }
     }
     .answer {
         &__inner {
-            padding-top: 0.5rem;
+            padding: 1rem;
         }
     }
 }

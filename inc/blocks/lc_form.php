@@ -1,8 +1,6 @@
-<?php
-$flower = get_field('show_flower')[0] == 'Yes' ? 'bg--flower' : '';
-?>
 <!-- form -->
-<section class="frm <?=$flower?> py-5">
+<a id="form" class="anchor"></a>
+<section class="frm py-5">
     <div class="container-xl">
         <div class="row">
             <div class="col-lg-4">
@@ -11,7 +9,7 @@ $flower = get_field('show_flower')[0] == 'Yes' ? 'bg--flower' : '';
             </div>
             <div class="col-lg-8">
                 <div class="frm__card">
-                    <?=do_shortcode('[contact-form-7 id="' . get_field('form_id') . '"]')?>
+                    <?=do_shortcode('[contact-form-7 id="' . get_field('form_id') . '" subject="' . get_field('subject') . '"]')?>
                 </div>
             </div>
         </div>

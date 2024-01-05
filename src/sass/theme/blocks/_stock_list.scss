@@ -3,15 +3,27 @@
         box-sizing: border-box;
     }
 
+    .status {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        .count {
+            .filter-count {
+                font-weight: 600;
+            }
+        }
+    }
+
     #reset,
-    #clear {
-        font-size: .889rem;
+    #clear,
+    #toForm {
+        font-size: 1rem; //.889rem;
         border-radius: 0.25rem !important;
         font-weight: 600;
         min-width: 170px;
         padding: 0.5rem 1rem;
-        border: 1px solid green;
-        background-color: #eee;
+        border: 1px solid $primary;
+        background-color: $grey-100;
         margin-right: 0.5rem;
     }
 
@@ -34,8 +46,16 @@
             border: none;
             border-right: 1px solid #ddd;
             text-align: left;
+            font-weight: 600;
+            font-size: 0.889rem;
             &:last-child {
                 border-width: 0px;
+            }
+        }
+        .enquire {
+            &::after {
+                content: "\f46d";
+                font-family: "Font Awesome 6 Free";
             }
         }
     }
@@ -63,6 +83,7 @@
             border-style: solid;
             border-width: 0 1px 1px 0;
             box-sizing: border-box;
+            overflow: hidden;
             &:last-child {
                 border-right-width: 0;
             }
@@ -71,26 +92,21 @@
 
 
     .category {
-        min-width: 200px;
-        width: 24%;
+        min-width: 100px;
+        width: 32%;
         font-weight: bold;
     }
 
     .genus {
-        min-width: 200px;
-        width: 24%;
+        min-width: 100px;
+        width: 32%;
         font-style: italic;
     }
 
     .species {
-        min-width: 200px;
-        width: 24%;
+        min-width: 100px;
+        width: 32%;
         font-style: italic;
-    }
-
-    .variant {
-        min-width: 200px;
-        width: 24%;
     }
 
     .button.enquire,
@@ -98,9 +114,10 @@
         cursor: default !important;
     }
     .enquire {
-        min-width: 80px;
+        min-width: 45px;
         width: 4%;
         text-align: center;
+        display: inline-block !important;
     }
 
     .all_stock {
@@ -109,7 +126,8 @@
 
     .sort,
     .content {
-        min-width: 1000px;
+        width: 100%;
+        max-width: 100vw;
     }
 
     .btn-group {
@@ -126,9 +144,63 @@
         height: 25px;
         cursor: pointer;
         margin-top: 0;
+        pointer-events: none;
     }
 
     .tb-data-single {
+        font-size: 0.889rem;
         cursor: pointer;
+        transition: background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $grey-100;
+        }
+    }
+}
+
+#openModal {
+    display: none;
+    position: fixed;
+    top: 30vh;
+    right: 0;
+    min-width: unset;
+    border: 1px solid $primary;
+    background-color: $secondary;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    color: $primary;
+    padding: 1rem;
+    font-weight: 600;
+    z-index: 999;
+    transition: box-shadow 0.2s ease-in-out,
+                transform 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        transform: translateY(2px);
+    }
+
+    .selection {
+        text-align: left;
+        .selection-count {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+#enquireModal {
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 700px;
+            margin: 1.75rem auto;
+        }
+    }
+    .modal-body {
+        padding-bottom: 2rem;
+    }
+
+    #selectionList {
+        padding-inline-start: 1rem;
     }
 }

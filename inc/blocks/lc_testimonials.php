@@ -17,7 +17,7 @@
                 <div class="carousel-item text-center <?=$active?>">
                     <?=get_the_content()?>
                 </div>
-                    <?php
+                <?php
                     $active = '';
                 }
                 ?>

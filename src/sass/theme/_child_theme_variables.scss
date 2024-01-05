@@ -3,13 +3,23 @@
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
 
-$black: #472021;
+$blue-50: hsl(209, 26%, 97%);
+$blue-100: hsl(209, 26%, 78%);
+$blue-400: hsl(209, 26%, 60%);
+// $blue-700: hsl(209, 26%, 25%);
+
+$blue-700: hsl(209, 77%, 19%);
+
+$red-400: #e5393d;
+
+// $black: #472021;
+$black: #0F110C;
 
 $grey-100: #f3f8f6;
 $grey-200: #d5e5e1;
 
-$green-900: #215732;
-$green: $green-900;
+// $green-900: #215732;
+// $green: $green-900;
 
 // jungle green
 // $secondary: hsl(162, 58%, 42%);
@@ -19,13 +29,13 @@ $green: $green-900;
 // $secondary: hsl(48, 100%, 50%);
 // $secondary-400: hsl(48, 100%, 70%);
 
-$secondary: hsl(43, 100%, 57%);
-$secondary-400: hsl(43, 100%, 77%);
+$secondary: $red-400;
+$secondary-400: $red-400;
 
 
-$primary: $green-900;
+$primary: $blue-100;
 
-$form-check-input-checked-bg-color: $green-900;
+// $form-check-input-checked-bg-color: $green-900;
 
 // $grid-breakpoints: (
 //   xs: 0,

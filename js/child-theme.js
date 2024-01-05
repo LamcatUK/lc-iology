@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.1.0 (https://understrap.com)
-  * Copyright 2013-2022 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2023 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {
@@ -6830,7 +6830,12 @@
 	var w = window;
 	w.scrollY || doc.scrollTop;
 	document.getElementById('navbar');
-	 // window.addEventListener('scroll', checkScroll);
+	// lightbox.option({
+	//   'resizeDuration': 200,
+	//   'imageFadeDuration': 300,
+	//   'wrapAround': true,
+	//   'disableScrolling': true,
+	// });
 
 	exports.Alert = alert;
 	exports.Button = button;

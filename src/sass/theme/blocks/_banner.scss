@@ -1,13 +1,17 @@
 .banner {
-    background-color: $primary;
-    color: white;
-    &__icon {
-        max-height: 75px;
-    }
+    background-color: $blue-700;
     &__content {
-        font-size: 2rem;
+        font-size: 1.4rem;
         span {
             font-weight: 600;
+        }
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.2s ease-in-out;
+        &:hover {
+            opacity: 0.8;
         }
     }
 }

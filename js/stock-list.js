@@ -1,9 +1,10 @@
-$(function() {
+jQuery(function($) {
 
 	var filters = {};
 	var buttonFilter;
 	// quick search regex
 	var qsRegex;
+	var $filterCount = $('.filter-count');
 
 	var $container = $('#isotope').isotope({
 		itemSelector : '.tb-data-single',
@@ -11,8 +12,7 @@ $(function() {
 		transitionDuration : 0,
 		getSortData: {
 			genus : '[data-genus]',
-			species : '[data-species]',
-			variant : '[data-variant]'
+			species : '[data-species]'
 		},
 		filter: function() {
 			var $this = $(this);
@@ -21,7 +21,15 @@ $(function() {
 			return searchResult && buttonResult;
 		},
 	});
+
+	var iso = $container.data('isotope');
     
+	function updateFilterCount() {
+		$filterCount.text( iso.filteredItems.length );
+	}
+	updateFilterCount();
+
+
 	$('#filters select').on('change', function() {
 		var $this = $(this);
 		// get group key
@@ -36,7 +44,7 @@ $(function() {
 		}
 		buttonFilter = concatValues( filterValue );
 		$container.isotope();
-
+		updateFilterCount();
 	});
 
 	// bind sort button click
@@ -56,18 +64,15 @@ $(function() {
 		$buttonGroup.find('i').removeClass('fa-sort-down').removeClass('fa-sort-up');
 		$buttonGroup.find('i').addClass('fa-sort');
 		$(this).addClass('is-checked');
-		// $(this).find('i').addClass('fa-sort');
 		
 		if($(this).hasClass('desc')){
 			$(this).removeClass('desc').addClass('asc');
-			// $(this).find('.fa').removeClass('fa-sort-amount-asc').addClass('fa-sort-amount-desc');
 			$(this).find('.fa').removeClass('fa-sort').removeClass('fa-sort-down').addClass('fa-sort-up');
 			$container.isotope({
 				sortAscending : false
 			});
 		} else {
 			$(this).removeClass('asc').addClass('desc');
-			// $(this).find('.fa').removeClass('fa-sort-amount-desc').addClass('fa-sort-amount-asc');
 			$(this).find('.fa').removeClass('fa-sort').removeClass('fa-sort-up').addClass('fa-sort-down');
 			$container.isotope({
 				sortAscending : true
@@ -80,6 +85,7 @@ $(function() {
 	var $quicksearch = $('.quicksearch').keyup( debounce( function() {
 		qsRegex = new RegExp( $quicksearch.val(), 'gi' );
 		$container.isotope();
+		updateFilterCount();
 	}) );
 
 	// flatten object by concatting values
@@ -123,15 +129,19 @@ $(function() {
 			sortBy : 'original-order',
 			sortAscending: true
 		});
+		updateFilterCount();
 	});
 
     $('#clear').on('click',function(){
         $('input.selection:checkbox').prop('checked',false);
         $('#selection').val('');
-    });
+        $('.selection-count').text('0');
+		$('#openModal').hide(300);
+		$('#selectionList').text('');
+	});
 
 
-	$('.tb-data-single').on('click',function(){
+	$('.tb-data-single').on('click', function(){
 
 		var c = $(this).find('input[type="checkbox"]');
         c.prop("checked", !c.prop("checked"));
@@ -141,11 +151,17 @@ $(function() {
             values[i] = $(this).val() + '\n';
         });
         var enquire = '';
+		$('#selectionList').text('');
+
         $.each(values, function(index, val) {
             enquire += val;
+			$('#selectionList').append('<li>'+val+'</li>');
         });
 
         $('#selection').val(enquire);
+		$('.selection-count').text( values.length );
+		values.length > 0 ? $('#openModal').show(300) : $('#openModal').hide(300);
+
 	});
 
-}(jQuery));
+});
