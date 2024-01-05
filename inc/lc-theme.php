@@ -138,6 +138,31 @@ function filter_the_content_in_the_main_loop($content)
     return $content;
 }
 
+/* whatsapp button */
+function whatsapp($atts)
+{
+    ob_start();
+
+    $default = array(
+        'message' => "Hi, I'm contacting you from the iology website.",
+        'label' => 'WhatsApp'
+    );
+
+    $a = shortcode_atts($default, $atts);
+    $message = htmlspecialchars($a['message'], ENT_QUOTES);
+    $label = $a['label'];
+
+    $phone = parse_phone(get_field('mobile', 'options'));
+
+    ?>
+<a href="https://api.whatsapp.com/send?phone=<?=$phone?>&text=<?=$message?>"
+    class="btn btn-primary me-2 mb-2" target="_blank"><?=$label?></a>
+<?php
+
+    return ob_get_clean();
+
+}
+add_shortcode('whatsapp_button', 'whatsapp');
 
 /*------------ LOGIN BITS -----*/
 
@@ -232,31 +257,6 @@ function lc_dashboard_widget_display()
 <?php
 }
 
-
-/* whatsapp button */
-function whatsapp($atts)
-{
-    ob_start();
-
-    $default = array(
-        'message' => "Hi, I'm contacting you from the iology website.",
-        'label' => 'WhatsApp'
-    );
-
-    $a = shortcode_atts($default, $atts);
-    $message = htmlspecialchars($a['message'], ENT_QUOTES);
-    $label = $a['label'];
-
-    $phone = parse_phone(get_field('mobile', 'options'));
-
-    ?>
-<a href="https://api.whatsapp.com/send?phone=<?=$phone?>&text=<?=$message?>"
-    class="btn btn-primary me-2 mb-2" target="_blank"><?=$label?></a>
-<?php
-
-    return ob_get_clean();
-}
-add_shortcode('whatsapp_button', 'whatsapp');
 
 //---------------- menu diddling ---//
 

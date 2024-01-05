@@ -52,7 +52,7 @@ while (have_rows('faq')) {
                         <?=get_sub_field('answer')?>
                     </div>
                     <div class="d-flex justify-content-center pb-4">
-                        <a href="http://iology.local/book-appointment/" target="" class="btn btn-primary">Book an
+                        <a href="/book-appointment/" target="" class="btn btn-primary">Book an
                             Appointment</a>
                     </div>
                 </div>

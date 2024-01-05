@@ -6,9 +6,6 @@ $margin = '';
 if (is_page(basename($l['url']))) {
     $margin = 'mb-5';
 }
-if (!get_field('show_banner', 'options')) {
-    $margin = 'mb-5';
-}
 ?>
 <!-- hero -->
 <section class="hero <?=$margin?>"
@@ -48,7 +45,7 @@ if (!get_field('show_banner', 'options')) {
 
 // echo '<pre>show : ' . get_field('show_banner', 'options')[0] . '</pre>';
 
-if (get_field('show_banner', 'options') && get_field('show_banner', 'options')[0] == 'Yes') {
+if (get_field('show_banner', 'options')[0] == 'Yes') {
     if (!is_page(basename($l['url']))) {
         ?>
 <!-- banner -->

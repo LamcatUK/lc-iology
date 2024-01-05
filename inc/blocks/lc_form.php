@@ -1,6 +1,9 @@
+<?php
+$flower = get_field('show_flower')[0] == 'Yes' ? 'bg--flower' : '';
+?>
 <!-- form -->
 <a id="form" class="anchor"></a>
-<section class="frm py-5">
+<section class="frm <?=$flower?> py-5">
     <div class="container-xl">
         <div class="row">
             <div class="col-lg-4">

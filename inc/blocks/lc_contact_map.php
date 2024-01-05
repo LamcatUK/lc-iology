@@ -31,14 +31,14 @@
                             <a
                                 href="tel:<?=parse_phone(get_field('mobile', 'options'))?>"><?=get_field('mobile', 'options')?></a>
                         </li>
-                        <li>
+                        <li class="mb-1">
                             <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
                             <a
                                 href="mailto:<?=get_field('email', 'options')?>"><?=get_field('email', 'options')?></a>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fa-brands fa-whatsapp"></i></span>
-                            <a
+                            <a target="_blank"
                                 href="https://api.whatsapp.com/send?phone=<?=parse_phone(get_field('mobile', 'options'))?>&text=<?=htmlspecialchars("Hi, I'm contacting you from the iology website.")?>">
                                 WhatsApp</a>
                         </li>

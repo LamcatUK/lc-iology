@@ -29,7 +29,7 @@ $cardSize = 'col-md-4';
                 ?>
                 <div class="card">
                     <div class="card__icon">
-                        <img src="<?=$icon?>">
+                        <img src="<?=$icon?>" alt="<?=get_field('card_1_title')?>" width="267" height="150">
                     </div>
                     <div class="card__bottom">
                         <h3><?=get_field('card_1_title')?>
@@ -55,7 +55,7 @@ $cardSize = 'col-md-4';
                 ?>
                 <div class="card">
                     <div class="card__icon">
-                        <img src="<?=$icon?>">
+                        <img src="<?=$icon?>" alt="<?=get_field('card_2_title')?>" width="267" height="150">
                     </div>
                     <div class="card__bottom">
                         <h3><?=get_field('card_2_title')?>
@@ -81,7 +81,7 @@ $cardSize = 'col-md-4';
                 ?>
                 <div class="card">
                     <div class="card__icon">
-                        <img src="<?=$icon?>">
+                        <img src="<?=$icon?>" alt="<?=get_field('card_3_title')?>" width="267" height="150">
                     </div>
                     <div class="card__bottom">
                         <h3><?=get_field('card_3_title')?>
