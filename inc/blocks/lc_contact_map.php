@@ -6,9 +6,7 @@
             <div class="col-md-5">
                 <div class="open card mb-4">
                     <h3>Opening Hours</h3>
-                    <p><?=do_shortcode('[is_open]')?>
-                    </p>
-                    <?=do_shortcode('[open_times]')?>
+                    <?=do_shortcode('[lc_open_ajax]')?>
                 </div>
                 <div class="contact card">
                     <ul class="fa-ul mb-2">
