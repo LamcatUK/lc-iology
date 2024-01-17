@@ -7,6 +7,12 @@ defined('ABSPATH') || exit;
 get_header('landing');
 ?>
 <style>
+    body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: 1fr auto auto;
+    }
+
     .landing-grid {
         display: grid;
         width: min(300px, 90vw);
