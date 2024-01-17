@@ -43,14 +43,12 @@ get_header('landing');
 <div class="footer">
     <div class="container pt-4 pb-2">
         <div class="row g-4">
-            <div class=" col-lg-6 mb-4 text-center">
+            <div class="col-12 mb-4 text-center">
                 Iology incorporating Aves Opticians<br>
                 55 Ripple Road, Barking,<br>
                 England, IG11 7PG
             </div>
-            <div class="col-md-6 col-lg-4">
-            </div>
-            <div class="col-md-6 col-lg-2 text-center text-lg-start">
+            <div class="col-12 text-center text-lg-start">
                 <ul class="fa-ul">
                     <li>
                         <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
@@ -67,15 +65,7 @@ get_header('landing');
                         <a
                             href="tel:<?=parse_phone(get_field('mobile', 'options'))?>"><?=get_field('mobile', 'options')?></a>
                     </li>
-                    <!-- li>
-                        <span class="fa-li"><i class="fa-brands fa-whatsapp"></i></span>
-                        <a href="https://api.whatsapp.com/send?phone=<?=parse_phone(get_field('mobile', 'options'))?>&text=Hi,%20I%27m%20contacting%20you%20from%20the%20Iology%20website."
-                    target="_blank">WhatsApp</a>
-                    </li -->
                 </ul>
-                <div class="social">
-                    <?php /* social_icons() */ ?>
-                </div>
             </div>
         </div>
     </div>
