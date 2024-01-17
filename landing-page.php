@@ -10,9 +10,9 @@ get_header('landing');
     .landing-grid {
         display: grid;
         width: min(300px, 90vw);
-        gap: 2rem;
         margin-inline: auto;
-        margin-bottom: 2rem;
+        align-items: stretch;
+        height: 100%;
     }
 
     .landing-grid img {
@@ -23,9 +23,11 @@ get_header('landing');
     .landing-grid a {
         display: block;
         width: 100%;
+        height: min-content;
+        padding-block: 1rem;
     }
 </style>
-<main>
+<main class="mt-4">
     <div class="landing-grid">
         <img src="<?=get_stylesheet_directory_uri()?>/img/iology-logo--colour.svg"
             class="logo" width="93" height="32" alt="iology Limited">
