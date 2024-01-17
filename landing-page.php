@@ -14,6 +14,11 @@ get_header('landing');
         margin-inline: auto;
     }
 
+    .landing-grid img {
+        width: min(600px, 90vw);
+        margin-bottom: 1rem;
+    }
+
     .landing-grid a {
         display: block;
         width: 100%;
