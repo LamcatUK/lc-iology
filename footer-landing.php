@@ -10,8 +10,6 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 ?>
-</div><!-- #page -->
-<!-- <div class="enquire-button">Enquire</div> -->
 <?php wp_footer();
 if (get_field('gtm_property', 'options')) {
     ?>

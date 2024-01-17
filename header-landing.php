@@ -94,4 +94,3 @@ defined('ABSPATH') || exit;
     <?php
 do_action('wp_body_open');
 ?>
-    <div class="site" id="page">
