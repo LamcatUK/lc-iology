@@ -6,8 +6,25 @@ defined('ABSPATH') || exit;
 
 get_header('landing');
 ?>
+<style>
+    .landing-grid {
+        display: grid;
+        width: min(600px, 90vw);
+        gap: 1rem;
+        margin-inline: auto;
+    }
+
+    .landing-grid a {
+        display: block;
+        width: 100%;
+    }
+</style>
 <main>
-    <div class="container-xl">
+    <div class="landing-grid">
+        <img src="<?=get_stylesheet_directory_uri()?>/img/iology-logo--colour.svg"
+            class="logo" width="93" height="32" alt="iology Limited">
+
+
         <a href="https://iology.co.uk/book-appointment/" class="btn btn-primary">Book an Appointment</a>
 
         <a href="https://api.whatsapp.com/send?phone=+447496971203&text=Hi,%20I%27m%20contacting%20you%20from%20the%20iology%20website."
