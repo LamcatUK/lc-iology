@@ -9,9 +9,10 @@ get_header('landing');
 <style>
     .landing-grid {
         display: grid;
-        width: min(600px, 90vw);
-        gap: 1rem;
+        width: min(300px, 90vw);
+        gap: 2rem;
         margin-inline: auto;
+        margin-bottom: 2rem;
     }
 
     .landing-grid img {
