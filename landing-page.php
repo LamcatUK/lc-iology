@@ -4,7 +4,7 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-get_header();
+get_header('landing');
 ?>
 <main>
     <div class="container-xl">
@@ -77,5 +77,5 @@ get_header();
 </div>
 
 <?php
-get_footer();
+get_footer('landing');
 ?>
