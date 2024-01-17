@@ -43,7 +43,7 @@ get_header('landing');
 <div class="footer">
     <div class="container pt-4 pb-2">
         <div class="row g-4">
-            <div class="col-12 mb-4 text-center">
+            <div class="col-12 text-center">
                 Iology incorporating Aves Opticians<br>
                 55 Ripple Road, Barking,<br>
                 England, IG11 7PG
@@ -52,11 +52,11 @@ get_header('landing');
                 <a
                     href="mailto:<?=get_field('email', 'options')?>"><i
                         class="fa-solid fa-envelope"></i>
-                    <?=get_field('email', 'options')?></a>
+                    <?=get_field('email', 'options')?></a><br>
                 <a
                     href="tel:<?=parse_phone(get_field('phone', 'options'))?>"><i
                         class="fa-solid fa-phone"></i>
-                    <?=get_field('phone', 'options')?></a>
+                    <?=get_field('phone', 'options')?></a><br>
                 <a
                     href="tel:<?=parse_phone(get_field('mobile', 'options'))?>"><i
                         class="fa-solid fa-mobile-screen"></i>
