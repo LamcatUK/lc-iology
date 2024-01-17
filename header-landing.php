@@ -84,7 +84,7 @@ defined('ABSPATH') || exit;
     <style>
         .cky-consent-container,
         .grecaptcha-badge {
-            display: none;
+            display: none !important;
         }
     </style>
     <?php wp_head(); ?>
