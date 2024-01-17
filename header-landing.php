@@ -81,6 +81,12 @@ defined('ABSPATH') || exit;
         echo '<meta name="msvalidate.01" content="' . get_field('bing_site_verification', 'options') . '" />';
     }
 ?>
+    <style>
+        .cky-consent-container,
+        .grecaptcha-badge {
+            display: none;
+        }
+    </style>
     <?php wp_head(); ?>
 </head>
 

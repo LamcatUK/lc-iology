@@ -96,38 +96,3 @@ function understrap_child_customize_controls_js()
     );
 }
 add_action('customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js');
-
-
-add_filter('cli_show_cookie_bar_only_on_selected_pages', 'webtoffee_custom_selected_pages', 10, 2);
-
-function webtoffee_custom_selected_pages($html, $slug)
-{
-    global $post;
-
-    // Check if the current page is using a specific template
-    if (is_page_template('landing-page.php')) {
-        $slug_array = array('review');
-        if (in_array($slug, $slug_array)) {
-            $html = '';
-        }
-    }
-
-    return $html;
-}
-
-add_action('wp_enqueue_scripts', 'wt_cli_disable_gdpr_js_and_css', 999);
-
-function wt_cli_disable_gdpr_js_and_css()
-{
-    global $post;
-
-    if(class_exists('Cookie_Law_Info')) {
-        $slug_array = array('review');
-        $slug = $post->post_name;
-        if (in_array($slug, $slug_array)) {
-            wp_dequeue_style('cookie-law-info');
-            wp_dequeue_style('cookie-law-info-gdpr');
-            wp_dequeue_script('cookie-law-info');
-        }
-    }
-}
