@@ -49,23 +49,18 @@ get_header('landing');
                 England, IG11 7PG
             </div>
             <div class="col-12 text-center text-lg-start">
-                <ul class="fa-ul">
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
-                        <a
-                            href="mailto:<?=get_field('email', 'options')?>"><?=get_field('email', 'options')?></a>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-phone"></i></span>
-                        <a
-                            href="tel:<?=parse_phone(get_field('phone', 'options'))?>"><?=get_field('phone', 'options')?></a>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-mobile-screen"></i></span>
-                        <a
-                            href="tel:<?=parse_phone(get_field('mobile', 'options'))?>"><?=get_field('mobile', 'options')?></a>
-                    </li>
-                </ul>
+                <a
+                    href="mailto:<?=get_field('email', 'options')?>"><i
+                        class="fa-solid fa-envelope"></i>
+                    <?=get_field('email', 'options')?></a>
+                <a
+                    href="tel:<?=parse_phone(get_field('phone', 'options'))?>"><i
+                        class="fa-solid fa-phone"></i>
+                    <?=get_field('phone', 'options')?></a>
+                <a
+                    href="tel:<?=parse_phone(get_field('mobile', 'options'))?>"><i
+                        class="fa-solid fa-mobile-screen"></i>
+                    <?=get_field('mobile', 'options')?></a>
             </div>
         </div>
     </div>
