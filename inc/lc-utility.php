@@ -311,4 +311,34 @@ function lc_orientation($id, $size = 'full')
     }
     return;
 }
+
+add_filter('cli_show_cookie_bar_only_on_selected_pages', 'webtoffee_custom_selected_pages', 10, 2);
+
+function webtoffee_custom_selected_pages($html, $slug)
+{
+    // In the eg here, the page with slug "review" will be excluded from showing banner.
+    $slug_array = array('review');
+    if (in_array($slug, $slug_array)) {
+        $html = '';
+    }
+
+    return $html;
+}
+
+add_action('wp_enqueue_scripts', 'wt_cli_disable_gdpr_js_and_css', 999);
+
+function wt_cli_disable_gdpr_js_and_css()
+{
+    global $post;
+
+    if(class_exists('Cookie_Law_Info')) {
+        $slug_array = array('review');
+        $slug = $post->post_name;
+        if (in_array($slug, $slug_array)) {
+            wp_dequeue_style('cookie-law-info');
+            wp_dequeue_style('cookie-law-info-gdpr');
+            wp_dequeue_script('cookie-law-info');
+        }
+    }
+}
 ?>
