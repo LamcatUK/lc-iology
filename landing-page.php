@@ -43,19 +43,14 @@ get_header('landing');
 <div class="footer">
     <div class="container pt-4 pb-2">
         <div class="row g-4">
-            <div class=" col-lg-6 mb-4">
-                <div class="text-center text-md-start mb-3">
-                    <img src="<?=get_stylesheet_directory_uri()?>/img/iology-logo--wo.svg"
-                        class="logo" width="93" height="32" alt="iology Limited">
-                </div>
+            <div class=" col-lg-6 mb-4 text-center">
                 Iology incorporating Aves Opticians<br>
                 55 Ripple Road, Barking,<br>
                 England, IG11 7PG
             </div>
             <div class="col-md-6 col-lg-4">
-                <?=wp_nav_menu(array('theme_location' => 'footer_menu1'))?>
             </div>
-            <div class="col-md-6 col-lg-2">
+            <div class="col-md-6 col-lg-2 text-center text-lg-start">
                 <ul class="fa-ul">
                     <li>
                         <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
